@@ -56,5 +56,10 @@ public class ParallelPrefixSum {
 				break;
 			}
 		}
+		// the best way is to write a class that acts like a list and will generate the triangular values as needed
+		// similarly to clojure's lazy lists
+		time = System.currentTimeMillis();
+		PrefixSummedList lazyList = new PrefixSummedList(1000000);
+		System.out.println("Lazy Time = " + (System.currentTimeMillis()-time) + "ms");
 	}
 }
